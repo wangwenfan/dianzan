@@ -5,7 +5,7 @@ mysql和redis实现的点赞功能
 > 点赞其实是个很有意思的功能，普通的mysql也可以实现，但是遇到高并发性能上不是很好。目前我觉得比较好的方式是用Redis作缓存来实现，从而减轻数据库的加入。
 
 - 下面这张图用来描述下我实现的思路。
-![reids流程图](http://qn.wangwenfan.top/mysql%E5%92%8Credis%E7%82%B9%E8%B5%9E%E5%8A%9F%E8%83%BD.png)
+![reids流程图](http://qn.wangwenfan.top/4324324234.png)
 
 - redis中有一个`post_set`的集合记录所有文章ID,每接受到一次请求，就`sadd`到`post_Set`。
 - `post_user_like_set_{$PID}`集合用来存放该文章下点赞用户的`UID`。
@@ -78,10 +78,10 @@ while (TRUE) {
 }
 ```
 然后cli运行脚本文件，点赞后输出successfully就OK了。
-![](http://qn.wangwenfan.top/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE20170617202659.png)
+![cli](http://qn.wangwenfan.top/546546546.png)
 
 5.demo里的效果。
-![](http://qn.wangwenfan.top/%E6%B7%B1%E5%BA%A6%E6%88%AA%E5%9B%BE20170617202617.png)
+![demo](http://qn.wangwenfan.top/534354676587.png)
 
 - 下载地址
 [https://github.com/wangwenfan/dianzan](https://github.com/wangwenfan/dianzan)

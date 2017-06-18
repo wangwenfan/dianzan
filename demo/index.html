@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>朋友圈点赞demo</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/weuix.min.css"/>
+    <script src="js/zepto.min.js"></script>
+</head>
+<body ontouchstart style="background-color: #f8f8f8;">
+<div class="weui_cells_title">朋友圈</div>
+<!-- 开始 朋友圈 -->
+<div class="weui_cells moments">
+    <!-- 普通的post -->
+    <div class="weui_cell moments__post" data-postid="13">
+        <div class="weui_cell_hd">
+            <img src="image/yy.jpg" />
+        </div>
+        <div class="weui_cell_bd">
+            <!-- 人名链接 -->
+            <a class="title" href="javascript:;">
+                <span>Angelabady</span>
+            </a>
+            <!-- post内容 -->
+            <p class="paragraph">
+                今天我漂亮吗？今天我漂亮吗？今天我漂亮吗？今天我漂亮吗？
+            </p>
+            <!-- 相册 -->
+            <div class="thumbnails">
+                <div class="thumbnail">
+                    <img src="image/3.jpg" />
+                </div>
+                <div class="thumbnail">
+                    <img src="image/2.jpg" />
+                </div>
+            </div>
+            <!-- 资料条 -->
+            <div class="toolbar">
+                <p class="timestamp">中国 北京</p>
+                <div>
+                    <div class="actionMenu slideIn">
+                        <p class="actionBtn btnLike" data-userid="2"><i class="icon icon-65  38">赞</i></p>
+                        <p class="actionBtn" ><i  class="icon icon-80">评论</i></p>
+                    </div>
+                </div>
+                <span  class="actionToggle">..</span>
+            </div>
+            <!-- 赞／评论区 -->
+            <p class="liketext">
+                <i class="icon icon-96"></i>
+                <span class="nickname">邓超</span>,
+                <span class="nickname">范冰冰</span>
+            </p>
+        </div>
+        <!-- 结束 post -->
+    </div>
+    <div class="weui_cell moments__post" data-postid="12">
+        <div class="weui_cell_hd">
+            <img src="image/cp.jpg" />
+        </div>
+        <div class="weui_cell_bd">
+            <!-- 人名链接 -->
+            <a class="title" href="javascript:;">
+                <span>川普</span>
+            </a>
+            <!-- post内容 -->
+            <p id="paragraph" class="paragraph">
+                谁要我支持就赞我下呗！谁要我支持就赞我下呗！谁要我支持就赞我下呗！谁要我支持就赞我下呗！谁要我支持就赞我下呗！
+                谁要我支持就赞我下呗！谁要我支持就赞我下呗！谁要我支持就赞我下呗！谁要我支持就赞我下呗！谁要我支持就赞我下呗！
+            </p>
+            <!-- 伸张链接 -->
+            <a id="paragraphExtender" class="paragraphExtender">显示全文</a>
+            <!-- 资料条 -->
+            <div class="toolbar">
+                <p class="timestamp">美国 纽约</p>
+                <div>
+                    <div class="actionMenu slideIn">
+                        <p class="actionBtn btnLike" data-userid="2"><i class="icon icon-65  38">赞</i></p>
+                        <p class="actionBtn" id="btnComment"><i id="aaa" class="icon icon-80">评论</i></p>
+                    </div>
+                </div>
+                <span  class="actionToggle">..</span>
+            </div>
+            <!-- 赞／评论区 -->
+            <p class="liketext">
+                <i class="icon icon-96"></i>
+                <span class="nickname">英女王</span>,
+                <span class="nickname">金三胖</span>
+            </p>
+        </div>
+        <!-- 结束 post -->
+    </div>
+</div>
+<!-- 结束 朋友圈 -->
+<script src="js/index.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <link rel="stylesheet" href="css/weuix.min.css"/>
+    <script src="js/zepto.min.js"></script>
+</head>
+<body ontouchstart style="background-color: #f8f8f8;">
+<form id="form">
+    <div class="weui_cells weui_cells_form">
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">文章ID</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="tel" required pattern="[0-9]+" id="post_id" maxlength="8" placeholder="输入文章ID" emptyTips="请输入文章ID" notMatchTips="请输入正确的文章ID">
+            </div>
+            <div class="weui_cell_ft">
+                <i class="weui_icon_warn"></i>
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="weui_cell_hd"><label class="weui_label">用户ID</label></div>
+            <div class="weui_cell_bd weui_cell_primary">
+                <input class="weui_input" type="tel" id="user_id" required pattern="[0-9]+" maxlength="8"  placeholder="输入用户ID" emptyTips="请输入用户ID" notMatchTips="请输入正确的用户ID">
+            </div>
+            <div class="weui_cell_ft">
+                <i class="weui_icon_warn"></i>
+            </div>
+        </div>
+    </div>
+    <div class="weui_btn_area">
+        <a id="formSubmitBtn" href="javascript:" class="weui_btn weui_btn_primary">提交</a>
+    </div>
+</form>
+<script>
+    var $form = $("#form");
+    $form.form();
+    $("#formSubmitBtn").on("click", function(){
+        $form.validate(function(error){
+            if(error){
+            }else{
+                var post_id=$("#post_id").val();
+                var user_id=$("#user_id").val();
+                $.post("controller.php",{post_id:post_id,user_id:user_id},function (data) {
+                    if(data.status == 1){
+                        $.alert('已赞,点赞量：'+data.zanCounts);
+                    }else{
+                        $.alert('取消赞,点赞量：'+data.zanCounts);
+                    }
+                       console.log(data);
+                },'json');
+//                $.toptips('验证通过提交','ok');
+            }
+        });
+
+    });
+</script>
+</body>
+</html>

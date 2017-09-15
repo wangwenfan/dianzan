@@ -2,7 +2,7 @@
 mysql和redis实现的点赞功能
 ---
 
-> 点赞其实是个很有意思的功能，普通的mysql也可以实现，但是遇到高并发性能上不是很好。目前我觉得比较好的方式是用Redis作缓存来实现，从而减轻数据库的加入。
+> 点赞其实是个很有意思的功能，普通的mysql也可以实现，但是遇到高并发性能上不是很好。目前我觉得比较好的方式是用Redis作缓存来实现，从而减轻数据库的负担。
 
 - 下面这张图用来描述下我实现的思路。
 ![reids流程图](http://qn.wangwenfan.top/4324324234.png)
@@ -36,8 +36,10 @@ mysql和redis实现的点赞功能
 ```
 - 使用方法：
 
-1.下载加压到项目，引入autoload.php。
-2.修改配置文件/config/config.php
+1. 下载加压到项目，引入autoload.php。
+2. 修改配置文件/config/config.php。
+3. 将/db/zan.sql 导入到mysql中。
+
 ```
 return [
     'redis' => [

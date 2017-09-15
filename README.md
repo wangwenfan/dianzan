@@ -36,7 +36,7 @@ mysql和redis实现的点赞功能
 ```
 - 使用方法：
 
-1. 下载加压到项目，引入autoload.php。
+1. 下载解压到项目，引入autoload.php。
 2. 修改配置文件/config/config.php。
 3. 将/db/zan.sql 导入到mysql中。
 

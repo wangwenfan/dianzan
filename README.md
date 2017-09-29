@@ -61,7 +61,7 @@ return [
     'log' =>'zan.log'
 ];
 ```
-3.实例化Like.class.php 
+4.实例化Like.class.php 
 ```
 require '../autoload.php';
 $like = new Like();
@@ -70,7 +70,7 @@ $post_id = $_POST['post_id'];
 $r = $like->giveFavour($user_id,$post_id);
 echo json_encode($r);
 ```
-4.出队脚本使用。
+5.出队脚本使用。
 
 ```
 require '../autoload.php';
@@ -82,7 +82,7 @@ while (TRUE) {
 然后cli运行脚本文件，点赞后输出successfully就OK了。
 ![cli](http://qn.wangwenfan.top/546546546.png)
 
-5.demo里的效果。
+- demo里的效果。
 
 
 ![demo](http://qn.wangwenfan.top/534354676587.png)
